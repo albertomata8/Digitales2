@@ -1,0 +1,254 @@
+$date
+	Mon Aug 31 21:06:10 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module BancoPrueba2bit_tarea34 $end
+$var wire 1 ! selector $end
+$var wire 2 " salida [1:0] $end
+$var wire 1 # clk $end
+$var wire 2 $ Q [1:0] $end
+$var wire 2 % B [1:0] $end
+$var wire 2 & A [1:0] $end
+$scope module floop $end
+$var wire 1 # clk $end
+$var wire 2 ' D [1:0] $end
+$var reg 2 ( Q [1:0] $end
+$upscope $end
+$scope module mux2 $end
+$var wire 1 ! selector $end
+$var wire 2 ) salida [0:1] $end
+$var wire 2 * B [0:1] $end
+$var wire 2 + A [0:1] $end
+$scope module mux1 $end
+$var wire 1 , A $end
+$var wire 1 - B $end
+$var wire 1 ! selector $end
+$var wire 1 . salida $end
+$var wire 1 / not1_a_and1 $end
+$var wire 1 0 and2_a_or1 $end
+$var wire 1 1 and1_a_or1 $end
+$scope module and1 $end
+$var wire 1 , A $end
+$var wire 1 1 F_and $end
+$var wire 1 / B $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 - A $end
+$var wire 1 0 F_and $end
+$var wire 1 ! B $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 / F_not $end
+$var wire 1 ! A $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 1 A $end
+$var wire 1 0 B $end
+$var wire 1 . F_or $end
+$upscope $end
+$upscope $end
+$scope module mux2 $end
+$var wire 1 2 A $end
+$var wire 1 3 B $end
+$var wire 1 ! selector $end
+$var wire 1 4 salida $end
+$var wire 1 5 not1_a_and1 $end
+$var wire 1 6 and2_a_or1 $end
+$var wire 1 7 and1_a_or1 $end
+$scope module and1 $end
+$var wire 1 2 A $end
+$var wire 1 7 F_and $end
+$var wire 1 5 B $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 3 A $end
+$var wire 1 6 F_and $end
+$var wire 1 ! B $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 5 F_not $end
+$var wire 1 ! A $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 7 A $end
+$var wire 1 6 B $end
+$var wire 1 4 F_or $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module prob $end
+$var wire 2 8 Q [1:0] $end
+$var wire 2 9 salida [1:0] $end
+$var reg 2 : A [1:0] $end
+$var reg 2 ; B [1:0] $end
+$var reg 1 # clk $end
+$var reg 1 ! selector $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 ;
+b0 :
+bx 9
+bx 8
+x7
+x6
+x5
+x4
+03
+02
+x1
+x0
+x/
+x.
+0-
+0,
+b0 +
+b0 *
+bx )
+bx (
+b0 '
+b0 &
+b0 %
+bx $
+0#
+bx "
+0!
+$end
+#50
+07
+01
+06
+00
+#53
+15
+1/
+#100
+12
+b0 $
+b0 (
+b0 8
+b1 &
+b1 '
+b1 +
+b1 :
+1#
+#104
+04
+b0 "
+b0 )
+b0 9
+0.
+#150
+17
+#200
+0#
+#204
+b1 "
+b1 )
+b1 9
+14
+#300
+02
+1,
+b10 &
+b10 '
+b10 +
+b10 :
+b1 $
+b1 (
+b1 8
+1#
+#350
+07
+11
+#400
+0#
+#404
+04
+b10 "
+b10 )
+b10 9
+1.
+#500
+12
+b10 $
+b10 (
+b10 8
+b11 &
+b11 '
+b11 +
+b11 :
+1#
+#550
+17
+#600
+0#
+#604
+b11 "
+b11 )
+b11 9
+14
+#700
+02
+0,
+b0 &
+b0 '
+b0 +
+b0 :
+1!
+b11 $
+b11 (
+b11 8
+13
+b1 %
+b1 *
+b1 ;
+1#
+#750
+07
+01
+16
+#753
+05
+0/
+#800
+0#
+#804
+b1 "
+b1 )
+b1 9
+0.
+#900
+b0 $
+b0 (
+b0 8
+03
+1-
+b10 %
+b10 *
+b10 ;
+1#
+#950
+06
+10
+#1000
+0#
+#1004
+04
+b10 "
+b10 )
+b10 9
+1.
+#1100
+13
+b11 %
+b11 *
+b11 ;
+1#

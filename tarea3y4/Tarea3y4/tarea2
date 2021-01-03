@@ -1,0 +1,482 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x564218e96ae0 .scope module, "BancoPruebas" "BancoPruebas" 2 7;
+ .timescale -9 -10;
+v0x564218ec30f0_0 .net "clk", 0 0, v0x564218ec27d0_0;  1 drivers
+v0x564218ec31b0_0 .net "contador_conductual", 4 0, v0x564218ec2890_0;  1 drivers
+v0x564218ec3270_0 .net "contador_estructural", 4 0, v0x564218ec2970_0;  1 drivers
+v0x564218ec3310_0 .net "data_in0", 1 0, v0x564218ec2a30_0;  1 drivers
+v0x564218ec3440_0 .net "data_in1", 1 0, v0x564218ec2af0_0;  1 drivers
+v0x564218ec3570_0 .net "data_out_conductual", 1 0, v0x564218e9d9b0_0;  1 drivers
+v0x564218ec3630_0 .net "data_out_estructural", 1 0, v0x564218eba1e0_0;  1 drivers
+v0x564218ec36f0_0 .net "reset_L", 0 0, v0x564218ec2db0_0;  1 drivers
+v0x564218ec3790_0 .net "selector", 0 0, v0x564218ec2e50_0;  1 drivers
+v0x564218ec38c0_0 .net "tierra", 1 0, v0x564218ec2ef0_0;  1 drivers
+S_0x564218e94160 .scope module, "mux_conduc" "mux_desc_conductualTarea2" 2 17, 3 1 0, S_0x564218e96ae0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "reset_L"
+    .port_info 2 /INPUT 1 "selector"
+    .port_info 3 /INPUT 2 "data_in0"
+    .port_info 4 /INPUT 2 "data_in1"
+    .port_info 5 /OUTPUT 2 "data_out"
+v0x564218e9cd00_0 .net "clk", 0 0, v0x564218ec27d0_0;  alias, 1 drivers
+v0x564218e9d1f0_0 .net "data_in0", 1 0, v0x564218ec2a30_0;  alias, 1 drivers
+v0x564218e9d700_0 .net "data_in1", 1 0, v0x564218ec2af0_0;  alias, 1 drivers
+v0x564218e9d9b0_0 .var "data_out", 1 0;
+v0x564218e9e9a0_0 .net "reset_L", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+v0x564218e99220_0 .net "selector", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+E_0x564218e766a0 .event posedge, v0x564218e9cd00_0;
+S_0x564218eb9c00 .scope module, "mux_estruc" "mux_desc_estructural_tarea34" 2 26, 4 4 0, S_0x564218e96ae0;
+ .timescale -9 -10;
+    .port_info 0 /OUTPUT 2 "data_out"
+    .port_info 1 /INPUT 1 "clk"
+    .port_info 2 /INPUT 1 "reset_L"
+    .port_info 3 /INPUT 1 "selector"
+    .port_info 4 /INPUT 2 "tierra"
+    .port_info 5 /INPUT 2 "data_in0"
+    .port_info 6 /INPUT 2 "data_in1"
+v0x564218ec1bb0_0 .net "clk", 0 0, v0x564218ec27d0_0;  alias, 1 drivers
+v0x564218ec1cc0_0 .net "data_in0", 1 0, v0x564218ec2a30_0;  alias, 1 drivers
+v0x564218ec1dd0_0 .net "data_in1", 1 0, v0x564218ec2af0_0;  alias, 1 drivers
+v0x564218ec1ec0_0 .net "data_out", 1 0, v0x564218eba1e0_0;  alias, 1 drivers
+v0x564218ec1f80_0 .net "mux1_a_mux2", 1 0, L_0x564218ec5330;  1 drivers
+v0x564218ec20c0_0 .net "mux2_a_floop", 1 0, L_0x564218ec6ed0;  1 drivers
+v0x564218ec21d0_0 .net "reset_L", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+v0x564218ec2270_0 .net "selector", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+v0x564218ec2310_0 .net "tierra", 1 0, v0x564218ec2ef0_0;  alias, 1 drivers
+S_0x564218eb9ea0 .scope module, "floop" "floop_tarea34" 4 18, 5 3 0, S_0x564218eb9c00;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 2 "D"
+    .port_info 1 /INPUT 1 "clk"
+    .port_info 2 /OUTPUT 2 "Q"
+v0x564218eba0e0_0 .net "D", 1 0, L_0x564218ec6ed0;  alias, 1 drivers
+v0x564218eba1e0_0 .var "Q", 1 0;
+v0x564218eba2c0_0 .net "clk", 0 0, v0x564218ec27d0_0;  alias, 1 drivers
+S_0x564218eba3a0 .scope module, "mux1" "mux2bit_tarea34" 4 16, 6 3 0, S_0x564218eb9c00;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 2 "A"
+    .port_info 1 /INPUT 2 "B"
+    .port_info 2 /INPUT 1 "selector"
+    .port_info 3 /OUTPUT 2 "salida"
+v0x564218ebdbd0_0 .net "A", 0 1, v0x564218ec2a30_0;  alias, 1 drivers
+v0x564218ebdcb0_0 .net "B", 0 1, v0x564218ec2af0_0;  alias, 1 drivers
+v0x564218ebdd50_0 .net "salida", 0 1, L_0x564218ec5330;  alias, 1 drivers
+v0x564218ebddf0_0 .net "selector", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+L_0x564218ec45e0 .part v0x564218ec2a30_0, 1, 1;
+L_0x564218ec46a0 .part v0x564218ec2af0_0, 1, 1;
+L_0x564218ec5330 .concat8 [ 1 1 0 0], L_0x564218ec4fd0, L_0x564218ec4280;
+L_0x564218ec53f0 .part v0x564218ec2a30_0, 0, 1;
+L_0x564218ec5490 .part v0x564218ec2af0_0, 0, 1;
+S_0x564218eba5e0 .scope module, "mux1" "mux1bit_tarea34" 6 11, 7 5 0, S_0x564218eba3a0;
+ .timescale -9 -10;
+    .port_info 0 /OUTPUT 1 "salida"
+    .port_info 1 /INPUT 1 "A"
+    .port_info 2 /INPUT 1 "B"
+    .port_info 3 /INPUT 1 "selector"
+v0x564218ebbb00_0 .net "A", 0 0, L_0x564218ec45e0;  1 drivers
+v0x564218ebbbd0_0 .net "B", 0 0, L_0x564218ec46a0;  1 drivers
+v0x564218ebbca0_0 .net "and1_a_or1", 0 0, L_0x564218ec3980;  1 drivers
+v0x564218ebbdc0_0 .net "and2_a_or1", 0 0, L_0x564218ec3cd0;  1 drivers
+v0x564218ebbeb0_0 .net "not1_a_and1", 0 0, L_0x564218ec3fb0;  1 drivers
+v0x564218ebbff0_0 .net "salida", 0 0, L_0x564218ec4280;  1 drivers
+v0x564218ebc090_0 .net "selector", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+S_0x564218eba820 .scope module, "and1" "AND_tarea34" 7 16, 8 1 0, S_0x564218eba5e0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_and"
+L_0x564218ec3980/d .functor AND 1, L_0x564218ec45e0, L_0x564218ec3fb0, C4<1>, C4<1>;
+L_0x564218ec3980 .delay 1 (50,50,50) L_0x564218ec3980/d;
+v0x564218ebaa80_0 .net "A", 0 0, L_0x564218ec45e0;  alias, 1 drivers
+v0x564218ebab60_0 .net "B", 0 0, L_0x564218ec3fb0;  alias, 1 drivers
+v0x564218ebac20_0 .net "F_and", 0 0, L_0x564218ec3980;  alias, 1 drivers
+S_0x564218ebad40 .scope module, "and2" "AND_tarea34" 7 17, 8 1 0, S_0x564218eba5e0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_and"
+L_0x564218ec3cd0/d .functor AND 1, L_0x564218ec46a0, v0x564218ec2e50_0, C4<1>, C4<1>;
+L_0x564218ec3cd0 .delay 1 (50,50,50) L_0x564218ec3cd0/d;
+v0x564218ebaf60_0 .net "A", 0 0, L_0x564218ec46a0;  alias, 1 drivers
+v0x564218ebb040_0 .net "B", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+v0x564218ebb130_0 .net "F_and", 0 0, L_0x564218ec3cd0;  alias, 1 drivers
+S_0x564218ebb240 .scope module, "not1" "NOT_tarea34" 7 18, 9 1 0, S_0x564218eba5e0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /OUTPUT 1 "F_not"
+L_0x564218ec3fb0/d .functor NOT 1, v0x564218ec2e50_0, C4<0>, C4<0>, C4<0>;
+L_0x564218ec3fb0 .delay 1 (53,53,53) L_0x564218ec3fb0/d;
+v0x564218ebb440_0 .net "A", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+v0x564218ebb530_0 .net "F_not", 0 0, L_0x564218ec3fb0;  alias, 1 drivers
+S_0x564218ebb610 .scope module, "or1" "OR_tarea34" 7 19, 10 1 0, S_0x564218eba5e0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_or"
+L_0x564218ec4280/d .functor OR 1, L_0x564218ec3980, L_0x564218ec3cd0, C4<0>, C4<0>;
+L_0x564218ec4280 .delay 1 (54,54,54) L_0x564218ec4280/d;
+v0x564218ebb830_0 .net "A", 0 0, L_0x564218ec3980;  alias, 1 drivers
+v0x564218ebb920_0 .net "B", 0 0, L_0x564218ec3cd0;  alias, 1 drivers
+v0x564218ebb9f0_0 .net "F_or", 0 0, L_0x564218ec4280;  alias, 1 drivers
+S_0x564218ebc130 .scope module, "mux2" "mux1bit_tarea34" 6 12, 7 5 0, S_0x564218eba3a0;
+ .timescale -9 -10;
+    .port_info 0 /OUTPUT 1 "salida"
+    .port_info 1 /INPUT 1 "A"
+    .port_info 2 /INPUT 1 "B"
+    .port_info 3 /INPUT 1 "selector"
+v0x564218ebd5a0_0 .net "A", 0 0, L_0x564218ec53f0;  1 drivers
+v0x564218ebd670_0 .net "B", 0 0, L_0x564218ec5490;  1 drivers
+v0x564218ebd740_0 .net "and1_a_or1", 0 0, L_0x564218ec4740;  1 drivers
+v0x564218ebd860_0 .net "and2_a_or1", 0 0, L_0x564218ec4a20;  1 drivers
+v0x564218ebd950_0 .net "not1_a_and1", 0 0, L_0x564218ec4d00;  1 drivers
+v0x564218ebda90_0 .net "salida", 0 0, L_0x564218ec4fd0;  1 drivers
+v0x564218ebdb30_0 .net "selector", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+S_0x564218ebc390 .scope module, "and1" "AND_tarea34" 7 16, 8 1 0, S_0x564218ebc130;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_and"
+L_0x564218ec4740/d .functor AND 1, L_0x564218ec53f0, L_0x564218ec4d00, C4<1>, C4<1>;
+L_0x564218ec4740 .delay 1 (50,50,50) L_0x564218ec4740/d;
+v0x564218ebc5d0_0 .net "A", 0 0, L_0x564218ec53f0;  alias, 1 drivers
+v0x564218ebc6b0_0 .net "B", 0 0, L_0x564218ec4d00;  alias, 1 drivers
+v0x564218ebc770_0 .net "F_and", 0 0, L_0x564218ec4740;  alias, 1 drivers
+S_0x564218ebc890 .scope module, "and2" "AND_tarea34" 7 17, 8 1 0, S_0x564218ebc130;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_and"
+L_0x564218ec4a20/d .functor AND 1, L_0x564218ec5490, v0x564218ec2e50_0, C4<1>, C4<1>;
+L_0x564218ec4a20 .delay 1 (50,50,50) L_0x564218ec4a20/d;
+v0x564218ebcab0_0 .net "A", 0 0, L_0x564218ec5490;  alias, 1 drivers
+v0x564218ebcb90_0 .net "B", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+v0x564218ebcc50_0 .net "F_and", 0 0, L_0x564218ec4a20;  alias, 1 drivers
+S_0x564218ebcd50 .scope module, "not1" "NOT_tarea34" 7 18, 9 1 0, S_0x564218ebc130;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /OUTPUT 1 "F_not"
+L_0x564218ec4d00/d .functor NOT 1, v0x564218ec2e50_0, C4<0>, C4<0>, C4<0>;
+L_0x564218ec4d00 .delay 1 (53,53,53) L_0x564218ec4d00/d;
+v0x564218ebcf00_0 .net "A", 0 0, v0x564218ec2e50_0;  alias, 1 drivers
+v0x564218ebcfa0_0 .net "F_not", 0 0, L_0x564218ec4d00;  alias, 1 drivers
+S_0x564218ebd0b0 .scope module, "or1" "OR_tarea34" 7 19, 10 1 0, S_0x564218ebc130;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_or"
+L_0x564218ec4fd0/d .functor OR 1, L_0x564218ec4740, L_0x564218ec4a20, C4<0>, C4<0>;
+L_0x564218ec4fd0 .delay 1 (54,54,54) L_0x564218ec4fd0/d;
+v0x564218ebd2d0_0 .net "A", 0 0, L_0x564218ec4740;  alias, 1 drivers
+v0x564218ebd3c0_0 .net "B", 0 0, L_0x564218ec4a20;  alias, 1 drivers
+v0x564218ebd490_0 .net "F_or", 0 0, L_0x564218ec4fd0;  alias, 1 drivers
+S_0x564218ebdf40 .scope module, "mux2" "mux2bit_tarea34" 4 17, 6 3 0, S_0x564218eb9c00;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 2 "A"
+    .port_info 1 /INPUT 2 "B"
+    .port_info 2 /INPUT 1 "selector"
+    .port_info 3 /OUTPUT 2 "salida"
+v0x564218ec1840_0 .net "A", 0 1, v0x564218ec2ef0_0;  alias, 1 drivers
+v0x564218ec1940_0 .net "B", 0 1, L_0x564218ec5330;  alias, 1 drivers
+v0x564218ec1a00_0 .net "salida", 0 1, L_0x564218ec6ed0;  alias, 1 drivers
+v0x564218ec1aa0_0 .net "selector", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+L_0x564218ec6100 .part v0x564218ec2ef0_0, 1, 1;
+L_0x564218ec6250 .part L_0x564218ec5330, 1, 1;
+L_0x564218ec6ed0 .concat8 [ 1 1 0 0], L_0x564218ec6b70, L_0x564218ec5da0;
+L_0x564218ec6f90 .part v0x564218ec2ef0_0, 0, 1;
+L_0x564218ec7030 .part L_0x564218ec5330, 0, 1;
+S_0x564218ebe1b0 .scope module, "mux1" "mux1bit_tarea34" 6 11, 7 5 0, S_0x564218ebdf40;
+ .timescale -9 -10;
+    .port_info 0 /OUTPUT 1 "salida"
+    .port_info 1 /INPUT 1 "A"
+    .port_info 2 /INPUT 1 "B"
+    .port_info 3 /INPUT 1 "selector"
+v0x564218ebf730_0 .net "A", 0 0, L_0x564218ec6100;  1 drivers
+v0x564218ebf800_0 .net "B", 0 0, L_0x564218ec6250;  1 drivers
+v0x564218ebf8d0_0 .net "and1_a_or1", 0 0, L_0x564218ec5530;  1 drivers
+v0x564218ebf9f0_0 .net "and2_a_or1", 0 0, L_0x564218ec57f0;  1 drivers
+v0x564218ebfae0_0 .net "not1_a_and1", 0 0, L_0x564218ec5ad0;  1 drivers
+v0x564218ebfc20_0 .net "salida", 0 0, L_0x564218ec5da0;  1 drivers
+v0x564218ebfcc0_0 .net "selector", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+S_0x564218ebe420 .scope module, "and1" "AND_tarea34" 7 16, 8 1 0, S_0x564218ebe1b0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_and"
+L_0x564218ec5530/d .functor AND 1, L_0x564218ec6100, L_0x564218ec5ad0, C4<1>, C4<1>;
+L_0x564218ec5530 .delay 1 (50,50,50) L_0x564218ec5530/d;
+v0x564218ebe680_0 .net "A", 0 0, L_0x564218ec6100;  alias, 1 drivers
+v0x564218ebe760_0 .net "B", 0 0, L_0x564218ec5ad0;  alias, 1 drivers
+v0x564218ebe820_0 .net "F_and", 0 0, L_0x564218ec5530;  alias, 1 drivers
+S_0x564218ebe970 .scope module, "and2" "AND_tarea34" 7 17, 8 1 0, S_0x564218ebe1b0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_and"
+L_0x564218ec57f0/d .functor AND 1, L_0x564218ec6250, v0x564218ec2db0_0, C4<1>, C4<1>;
+L_0x564218ec57f0 .delay 1 (50,50,50) L_0x564218ec57f0/d;
+v0x564218ebeb90_0 .net "A", 0 0, L_0x564218ec6250;  alias, 1 drivers
+v0x564218ebec70_0 .net "B", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+v0x564218ebed60_0 .net "F_and", 0 0, L_0x564218ec57f0;  alias, 1 drivers
+S_0x564218ebee70 .scope module, "not1" "NOT_tarea34" 7 18, 9 1 0, S_0x564218ebe1b0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /OUTPUT 1 "F_not"
+L_0x564218ec5ad0/d .functor NOT 1, v0x564218ec2db0_0, C4<0>, C4<0>, C4<0>;
+L_0x564218ec5ad0 .delay 1 (53,53,53) L_0x564218ec5ad0/d;
+v0x564218ebf070_0 .net "A", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+v0x564218ebf160_0 .net "F_not", 0 0, L_0x564218ec5ad0;  alias, 1 drivers
+S_0x564218ebf240 .scope module, "or1" "OR_tarea34" 7 19, 10 1 0, S_0x564218ebe1b0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_or"
+L_0x564218ec5da0/d .functor OR 1, L_0x564218ec5530, L_0x564218ec57f0, C4<0>, C4<0>;
+L_0x564218ec5da0 .delay 1 (54,54,54) L_0x564218ec5da0/d;
+v0x564218ebf460_0 .net "A", 0 0, L_0x564218ec5530;  alias, 1 drivers
+v0x564218ebf550_0 .net "B", 0 0, L_0x564218ec57f0;  alias, 1 drivers
+v0x564218ebf620_0 .net "F_or", 0 0, L_0x564218ec5da0;  alias, 1 drivers
+S_0x564218ebfd60 .scope module, "mux2" "mux1bit_tarea34" 6 12, 7 5 0, S_0x564218ebdf40;
+ .timescale -9 -10;
+    .port_info 0 /OUTPUT 1 "salida"
+    .port_info 1 /INPUT 1 "A"
+    .port_info 2 /INPUT 1 "B"
+    .port_info 3 /INPUT 1 "selector"
+v0x564218ec1210_0 .net "A", 0 0, L_0x564218ec6f90;  1 drivers
+v0x564218ec12e0_0 .net "B", 0 0, L_0x564218ec7030;  1 drivers
+v0x564218ec13b0_0 .net "and1_a_or1", 0 0, L_0x564218ec6380;  1 drivers
+v0x564218ec14d0_0 .net "and2_a_or1", 0 0, L_0x564218ec65c0;  1 drivers
+v0x564218ec15c0_0 .net "not1_a_and1", 0 0, L_0x564218ec68a0;  1 drivers
+v0x564218ec1700_0 .net "salida", 0 0, L_0x564218ec6b70;  1 drivers
+v0x564218ec17a0_0 .net "selector", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+S_0x564218ebffc0 .scope module, "and1" "AND_tarea34" 7 16, 8 1 0, S_0x564218ebfd60;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_and"
+L_0x564218ec6380/d .functor AND 1, L_0x564218ec6f90, L_0x564218ec68a0, C4<1>, C4<1>;
+L_0x564218ec6380 .delay 1 (50,50,50) L_0x564218ec6380/d;
+v0x564218ec0200_0 .net "A", 0 0, L_0x564218ec6f90;  alias, 1 drivers
+v0x564218ec02e0_0 .net "B", 0 0, L_0x564218ec68a0;  alias, 1 drivers
+v0x564218ec03a0_0 .net "F_and", 0 0, L_0x564218ec6380;  alias, 1 drivers
+S_0x564218ec04c0 .scope module, "and2" "AND_tarea34" 7 17, 8 1 0, S_0x564218ebfd60;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_and"
+L_0x564218ec65c0/d .functor AND 1, L_0x564218ec7030, v0x564218ec2db0_0, C4<1>, C4<1>;
+L_0x564218ec65c0 .delay 1 (50,50,50) L_0x564218ec65c0/d;
+v0x564218ec06e0_0 .net "A", 0 0, L_0x564218ec7030;  alias, 1 drivers
+v0x564218ec07c0_0 .net "B", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+v0x564218ec0880_0 .net "F_and", 0 0, L_0x564218ec65c0;  alias, 1 drivers
+S_0x564218ec0980 .scope module, "not1" "NOT_tarea34" 7 18, 9 1 0, S_0x564218ebfd60;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /OUTPUT 1 "F_not"
+L_0x564218ec68a0/d .functor NOT 1, v0x564218ec2db0_0, C4<0>, C4<0>, C4<0>;
+L_0x564218ec68a0 .delay 1 (53,53,53) L_0x564218ec68a0/d;
+v0x564218ec0b70_0 .net "A", 0 0, v0x564218ec2db0_0;  alias, 1 drivers
+v0x564218ec0c10_0 .net "F_not", 0 0, L_0x564218ec68a0;  alias, 1 drivers
+S_0x564218ec0d20 .scope module, "or1" "OR_tarea34" 7 19, 10 1 0, S_0x564218ebfd60;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "F_or"
+L_0x564218ec6b70/d .functor OR 1, L_0x564218ec6380, L_0x564218ec65c0, C4<0>, C4<0>;
+L_0x564218ec6b70 .delay 1 (54,54,54) L_0x564218ec6b70/d;
+v0x564218ec0f40_0 .net "A", 0 0, L_0x564218ec6380;  alias, 1 drivers
+v0x564218ec1030_0 .net "B", 0 0, L_0x564218ec65c0;  alias, 1 drivers
+v0x564218ec1100_0 .net "F_or", 0 0, L_0x564218ec6b70;  alias, 1 drivers
+S_0x564218ec24d0 .scope module, "probador" "probadormuxTarea2" 2 36, 11 1 0, S_0x564218e96ae0;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 2 "data_out_estructural"
+    .port_info 1 /INPUT 2 "data_out_conductual"
+    .port_info 2 /OUTPUT 1 "clk"
+    .port_info 3 /OUTPUT 1 "reset_L"
+    .port_info 4 /OUTPUT 1 "selector"
+    .port_info 5 /OUTPUT 2 "data_in0"
+    .port_info 6 /OUTPUT 2 "data_in1"
+    .port_info 7 /OUTPUT 2 "tierra"
+    .port_info 8 /OUTPUT 5 "contador_conductual"
+    .port_info 9 /OUTPUT 5 "contador_estructural"
+v0x564218ec27d0_0 .var "clk", 0 0;
+v0x564218ec2890_0 .var "contador_conductual", 4 0;
+v0x564218ec2970_0 .var "contador_estructural", 4 0;
+v0x564218ec2a30_0 .var "data_in0", 1 0;
+v0x564218ec2af0_0 .var "data_in1", 1 0;
+v0x564218ec2c00_0 .net "data_out_conductual", 1 0, v0x564218e9d9b0_0;  alias, 1 drivers
+v0x564218ec2cc0_0 .net "data_out_estructural", 1 0, v0x564218eba1e0_0;  alias, 1 drivers
+v0x564218ec2db0_0 .var "reset_L", 0 0;
+v0x564218ec2e50_0 .var "selector", 0 0;
+v0x564218ec2ef0_0 .var "tierra", 1 0;
+E_0x564218e8b810 .event posedge, v0x564218eba1e0_0;
+E_0x564218ec2770 .event posedge, v0x564218e9d9b0_0;
+    .scope S_0x564218e94160;
+T_0 ;
+    %wait E_0x564218e766a0;
+    %load/vec4 v0x564218e9e9a0_0;
+    %pad/u 32;
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_0.0, 4;
+    %load/vec4 v0x564218e99220_0;
+    %pad/u 32;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.2, 4;
+    %load/vec4 v0x564218e9d1f0_0;
+    %assign/vec4 v0x564218e9d9b0_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0x564218e9d700_0;
+    %assign/vec4 v0x564218e9d9b0_0, 0;
+T_0.3 ;
+    %jmp T_0.1;
+T_0.0 ;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x564218e9d9b0_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x564218eb9ea0;
+T_1 ;
+    %wait E_0x564218e766a0;
+    %load/vec4 v0x564218eba0e0_0;
+    %assign/vec4 v0x564218eba1e0_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x564218ec24d0;
+T_2 ;
+    %vpi_call 11 22 "$dumpfile", "muxTarea2.vcd" {0 0 0};
+    %vpi_call 11 23 "$dumpvars" {0 0 0};
+    %vpi_call 11 25 "$display", "\011\011\011clk,\011out,\011reset,\011selector,\011in0,\011in1" {0 0 0};
+    %vpi_call 11 27 "$monitor", $time, "\011%b\011%b\011\011%b\011%b\011%b\011%b", v0x564218ec27d0_0, v0x564218ec2c00_0, v0x564218ec2cc0_0, v0x564218ec2e50_0, v0x564218ec2db0_0, v0x564218ec2a30_0, v0x564218ec2af0_0 {0 0 0};
+    %pushi/vec4 0, 0, 2;
+    %split/vec4 1;
+    %store/vec4 v0x564218ec2db0_0, 0, 1;
+    %store/vec4 v0x564218ec2e50_0, 0, 1;
+    %pushi/vec4 0, 0, 4;
+    %split/vec4 2;
+    %store/vec4 v0x564218ec2af0_0, 0, 2;
+    %store/vec4 v0x564218ec2a30_0, 0, 2;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x564218ec2ef0_0, 0, 2;
+    %pushi/vec4 0, 0, 10;
+    %split/vec4 5;
+    %store/vec4 v0x564218ec2970_0, 0, 5;
+    %store/vec4 v0x564218ec2890_0, 0, 5;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x564218ec2db0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x564218ec2e50_0, 0;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 3, 0, 2;
+    %assign/vec4 v0x564218ec2a30_0, 0;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v0x564218ec2af0_0, 0;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 1, 0, 2;
+    %assign/vec4 v0x564218ec2a30_0, 0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x564218ec2af0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x564218ec2e50_0, 0;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x564218ec2a30_0, 0;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v0x564218ec2af0_0, 0;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 3, 0, 2;
+    %assign/vec4 v0x564218ec2a30_0, 0;
+    %pushi/vec4 3, 0, 2;
+    %assign/vec4 v0x564218ec2af0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x564218ec2e50_0, 0;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x564218ec2a30_0, 0;
+    %pushi/vec4 1, 0, 2;
+    %assign/vec4 v0x564218ec2af0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x564218ec2e50_0, 0;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v0x564218ec2a30_0, 0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x564218ec2af0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x564218ec2e50_0, 0;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x564218ec2e50_0, 0;
+    %wait E_0x564218e766a0;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v0x564218ec2a30_0, 0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x564218ec2af0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x564218ec2e50_0, 0;
+    %vpi_call 11 81 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+    .scope S_0x564218ec24d0;
+T_3 ;
+    %wait E_0x564218ec2770;
+    %load/vec4 v0x564218ec2890_0;
+    %addi 1, 0, 5;
+    %store/vec4 v0x564218ec2890_0, 0, 5;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0x564218ec24d0;
+T_4 ;
+    %wait E_0x564218e8b810;
+    %load/vec4 v0x564218ec2970_0;
+    %addi 1, 0, 5;
+    %store/vec4 v0x564218ec2970_0, 0, 5;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_0x564218ec24d0;
+T_5 ;
+    %wait E_0x564218e766a0;
+    %load/vec4 v0x564218ec2c00_0;
+    %load/vec4 v0x564218ec2cc0_0;
+    %cmp/ne;
+    %jmp/0xz  T_5.0, 4;
+    %vpi_call 11 96 "$display", "Diferencia modulo conductual y estructural" {0 0 0};
+T_5.0 ;
+    %jmp T_5;
+    .thread T_5;
+    .scope S_0x564218ec24d0;
+T_6 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x564218ec27d0_0, 0;
+    %end;
+    .thread T_6;
+    .scope S_0x564218ec24d0;
+T_7 ;
+    %delay 133, 0;
+    %load/vec4 v0x564218ec27d0_0;
+    %inv;
+    %assign/vec4 v0x564218ec27d0_0, 0;
+    %jmp T_7;
+    .thread T_7;
+# The file index is used to find the file name in the following table.
+:file_names 12;
+    "N/A";
+    "<interactive>";
+    "BancoPruebaTarea2.v";
+    "./mux_desc_conductualTarea2.v";
+    "./mux_desc_estructural_tarea34.v";
+    "./floop_tarea34.v";
+    "./mux2bit_tarea34.v";
+    "./mux1bit_tarea34.v";
+    "./AND_tarea34.v";
+    "./NOT_tarea34.v";
+    "./OR_tarea34.v";
+    "./probadormuxTarea2.v";
