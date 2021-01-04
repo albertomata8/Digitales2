@@ -1,0 +1,521 @@
+$date
+	Mon Sep 14 14:16:58 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module BUF $end
+$var wire 1 ! A $end
+$var wire 1 " Y $end
+$upscope $end
+$scope module BancoPrueba2a1_2b $end
+$var wire 1 # valid_data_out2a1_2b $end
+$var wire 1 $ valid_in1 $end
+$var wire 1 % valid_in0 $end
+$var wire 1 & selector $end
+$var wire 1 ' reset_L $end
+$var wire 2 ( data_out_sintetizado2a1_2b [1:0] $end
+$var wire 2 ) data_out_conductual2a1_2b [1:0] $end
+$var wire 2 * data_in12a1_2b [1:0] $end
+$var wire 2 + data_in02a1_2b [1:0] $end
+$var wire 1 , clk $end
+$scope module mux $end
+$var wire 1 $ valid_in1 $end
+$var wire 1 % valid_in0 $end
+$var wire 1 & selector $end
+$var wire 1 ' reset_L $end
+$var wire 2 - data_in12a1_2b [1:0] $end
+$var wire 2 . data_in02a1_2b [1:0] $end
+$var wire 1 , clk $end
+$var reg 2 / data_out_conductual2a1_2b [1:0] $end
+$var reg 1 0 valid_data_out2a1_2b $end
+$upscope $end
+$scope module mux_estruc $end
+$var wire 1 # valid_data_out2a1_2b $end
+$var wire 1 $ valid_in1 $end
+$var wire 1 % valid_in0 $end
+$var wire 1 & selector $end
+$var wire 1 ' reset_L $end
+$var wire 2 1 data_out_conductual2a1_2b [1:0] $end
+$var wire 2 2 data_in12a1_2b [1:0] $end
+$var wire 2 3 data_in02a1_2b [1:0] $end
+$var wire 1 , clk $end
+$var wire 1 4 _20_ $end
+$var wire 1 5 _19_ $end
+$var wire 1 6 _18_ $end
+$var wire 1 7 _17_ $end
+$var wire 1 8 _16_ $end
+$var wire 1 9 _15_ $end
+$var wire 1 : _14_ $end
+$var wire 1 ; _13_ $end
+$var wire 1 < _12_ $end
+$var wire 1 = _11_ $end
+$var wire 1 > _10_ $end
+$var wire 1 ? _09_ $end
+$var wire 1 @ _08_ $end
+$var wire 1 A _07_ $end
+$var wire 1 B _06_ $end
+$var wire 1 C _05_ $end
+$var wire 1 D _04_ $end
+$var wire 1 E _03_ $end
+$var wire 1 F _02_ $end
+$var wire 1 G _01_ $end
+$var wire 2 H _00_ [1:0] $end
+$scope module _21_ $end
+$var wire 1 A Y $end
+$var wire 1 $ B $end
+$var wire 1 & A $end
+$upscope $end
+$scope module _22_ $end
+$var wire 1 A B $end
+$var wire 1 G Y $end
+$var wire 1 B A $end
+$upscope $end
+$scope module _23_ $end
+$var wire 1 I A $end
+$var wire 1 G B $end
+$var wire 1 @ Y $end
+$upscope $end
+$scope module _24_ $end
+$var wire 1 ? Y $end
+$var wire 1 $ B $end
+$var wire 1 % A $end
+$upscope $end
+$scope module _25_ $end
+$var wire 1 > Y $end
+$var wire 1 C B $end
+$var wire 1 E A $end
+$upscope $end
+$scope module _26_ $end
+$var wire 1 J A $end
+$var wire 1 A B $end
+$var wire 1 = Y $end
+$upscope $end
+$scope module _27_ $end
+$var wire 1 > B $end
+$var wire 1 < Y $end
+$var wire 1 ' A $end
+$upscope $end
+$scope module _28_ $end
+$var wire 1 = A $end
+$var wire 1 < B $end
+$var wire 1 ; Y $end
+$upscope $end
+$scope module _29_ $end
+$var wire 1 ? A $end
+$var wire 1 ; B $end
+$var wire 1 : Y $end
+$upscope $end
+$scope module _30_ $end
+$var wire 1 @ A $end
+$var wire 1 : B $end
+$var wire 1 K Y $end
+$upscope $end
+$scope module _31_ $end
+$var wire 1 L A $end
+$var wire 1 G B $end
+$var wire 1 9 Y $end
+$upscope $end
+$scope module _32_ $end
+$var wire 1 8 Y $end
+$var wire 1 C B $end
+$var wire 1 D A $end
+$upscope $end
+$scope module _33_ $end
+$var wire 1 M A $end
+$var wire 1 A B $end
+$var wire 1 7 Y $end
+$upscope $end
+$scope module _34_ $end
+$var wire 1 8 B $end
+$var wire 1 6 Y $end
+$var wire 1 ' A $end
+$upscope $end
+$scope module _35_ $end
+$var wire 1 7 A $end
+$var wire 1 6 B $end
+$var wire 1 5 Y $end
+$upscope $end
+$scope module _36_ $end
+$var wire 1 ? A $end
+$var wire 1 5 B $end
+$var wire 1 4 Y $end
+$upscope $end
+$scope module _37_ $end
+$var wire 1 9 A $end
+$var wire 1 4 B $end
+$var wire 1 N Y $end
+$upscope $end
+$scope module _38_ $end
+$var wire 1 F Y $end
+$var wire 1 % A $end
+$upscope $end
+$scope module _39_ $end
+$var wire 1 O A $end
+$var wire 1 E Y $end
+$upscope $end
+$scope module _40_ $end
+$var wire 1 P A $end
+$var wire 1 D Y $end
+$upscope $end
+$scope module _41_ $end
+$var wire 1 F A $end
+$var wire 1 C Y $end
+$var wire 1 & B $end
+$upscope $end
+$scope module _42_ $end
+$var wire 1 C A $end
+$var wire 1 B Y $end
+$upscope $end
+$scope module _43_ $end
+$var wire 1 Q D $end
+$var wire 1 , C $end
+$var reg 1 R Q $end
+$upscope $end
+$scope module _44_ $end
+$var wire 1 S D $end
+$var wire 1 , C $end
+$var reg 1 T Q $end
+$upscope $end
+$scope module _45_ $end
+$var wire 1 G D $end
+$var wire 1 , C $end
+$var reg 1 U Q $end
+$upscope $end
+$upscope $end
+$scope module probador $end
+$var wire 2 V data_out_conductual2a1_2b [1:0] $end
+$var wire 2 W data_out_sintetizado2a1_2b [1:0] $end
+$var wire 1 # valid_data_out2a1_2b $end
+$var reg 1 , clk $end
+$var reg 2 X data_in02a1_2b [1:0] $end
+$var reg 2 Y data_in12a1_2b [1:0] $end
+$var reg 1 ' reset_L $end
+$var reg 1 & selector $end
+$var reg 1 % valid_in0 $end
+$var reg 1 $ valid_in1 $end
+$upscope $end
+$upscope $end
+$scope module DFFSR $end
+$var wire 1 Z C $end
+$var wire 1 [ D $end
+$var wire 1 \ R $end
+$var wire 1 ] S $end
+$var reg 1 ^ Q $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x^
+z]
+z\
+z[
+zZ
+b0 Y
+b0 X
+bx W
+bx V
+xU
+xT
+xS
+xR
+xQ
+0P
+0O
+xN
+0M
+xL
+xK
+0J
+xI
+bx H
+0G
+1F
+1E
+1D
+0C
+1B
+1A
+x@
+1?
+1>
+0=
+1<
+0;
+0:
+x9
+18
+07
+16
+05
+04
+b0 3
+b0 2
+bx 1
+x0
+bx /
+b0 .
+b0 -
+0,
+b0 +
+b0 *
+bx )
+bx (
+0'
+0&
+0%
+0$
+x#
+z"
+z!
+$end
+#20
+15
+1;
+06
+0<
+0#
+00
+0U
+1'
+1,
+#40
+0,
+#60
+0D
+0E
+1M
+1P
+1O
+b10 *
+b10 -
+b10 2
+b10 Y
+b11 +
+b11 .
+b11 3
+b11 X
+1Q
+1S
+04
+0:
+1K
+b11 H
+1N
+15
+1;
+0@
+09
+06
+0<
+1G
+18
+1>
+0B
+1C
+0?
+0F
+1$
+1%
+1,
+#80
+0,
+#100
+0Q
+0S
+0K
+b0 H
+0N
+1:
+14
+0;
+05
+1=
+17
+1B
+0C
+0A
+1D
+1I
+1L
+0M
+0P
+10
+b11 )
+b11 /
+b11 V
+1R
+b11 (
+b11 1
+b11 W
+1T
+1#
+1U
+1&
+b0 *
+b0 -
+b0 2
+b0 Y
+b1 +
+b1 .
+b1 3
+b1 X
+1,
+#120
+0,
+#140
+1S
+b10 H
+1N
+04
+15
+07
+1E
+1M
+0O
+0L
+0I
+b10 *
+b10 -
+b10 2
+b10 Y
+b0 +
+b0 .
+b0 3
+b0 X
+0T
+b0 (
+b0 1
+b0 W
+0R
+b0 )
+b0 /
+b0 V
+1,
+#160
+0,
+#180
+1Q
+b11 H
+1K
+0:
+0@
+1;
+1G
+0B
+0=
+1C
+1A
+0D
+0E
+1L
+1J
+1P
+1O
+b10 )
+b10 /
+b10 V
+b10 (
+b10 1
+b10 W
+1T
+0&
+b11 *
+b11 -
+b11 2
+b11 Y
+b11 +
+b11 .
+b11 3
+b11 X
+1,
+#200
+0,
+#220
+1D
+1E
+0M
+0P
+0O
+1I
+1&
+b1 *
+b1 -
+b1 2
+b1 Y
+b0 +
+b0 .
+b0 3
+b0 X
+b11 (
+b11 1
+b11 W
+1R
+b11 )
+b11 /
+b11 V
+1Q
+b11 H
+1K
+0@
+0G
+1B
+0C
+1?
+1F
+0$
+0%
+1,
+#240
+0,
+#260
+0D
+0J
+1P
+00
+0#
+0U
+0&
+b0 *
+b0 -
+b0 2
+b0 Y
+b10 +
+b10 .
+b10 3
+b10 X
+1,
+#280
+0,
+#300
+1&
+1,
+#320
+0,
+#340
+x#
+10
+b0 )
+b0 /
+b0 V
+0Q
+0S
+0K
+b0 H
+0N
+1:
+14
+0;
+05
+1G
+1=
+17
+0A
+0?
+0F
+1$
+1%
+1,

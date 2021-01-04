@@ -1,0 +1,28 @@
+#read design
+read_verilog mux4a1_4b_desc_conductual.v
+hierarchy -check -top mux4a1_4b_desc_conductual
+
+# the high-level stuff
+
+proc; opt; fsm; opt; memory; opt
+
+# mapping to internal cell library
+techmap; opt
+
+#mapping flip-flops to mycells.lib
+dfflibmap -liberty cmos_cells.lib
+
+#mapping logic to mycells.lib
+abc -liberty cmos_cells.lib
+
+opt
+
+#show
+
+#show -lib cmos_cells.v
+
+#cleanup
+clean
+
+# write synthesized design
+write_verilog sintetizado4a1_4b.v
