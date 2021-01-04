@@ -1,0 +1,14 @@
+read_verilog maquina_de_estados.v 
+
+hierarchy -check -top maquina_de_estados
+
+proc; opt; memory; opt; fsm; opt;
+
+techmap; opt;
+
+dfflibmap -liberty cmos_cells.lib
+abc -liberty cmos_cells.lib
+
+clean
+
+write_verilog maquina_de_estados_sintetizado.v
